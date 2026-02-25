@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASMEEMAM General Enterprises Limited | Agricultural & Global Trade Solutions</title>
+  <meta name="description" content="ASMEEMAM General Enterprises Limited (RC 9365843) – Leading agricultural export company in Kano, Nigeria. Quality produce supplier, general trading, and industrial supply." />
+  <meta name="keywords" content="agricultural export company Nigeria, agricultural produce supplier Kano, import export company Nigeria, general trading company Nigeria, sesame seeds ginger maize export" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ===================== VARIABLES ===================== */
+    :root {
+      --navy: #0a1f3c;
+      --navy-mid: #122d55;
+      --navy-light: #1e4278;
+      --forest: #0f3320;
+      --forest-mid: #1c5436;
+      --forest-bright: #28a060;
+      --leaf: #4dc880;
+      --gold: #c8922a;
+      --gold-light: #f5e8d0;
+      --cream: #fafaf7;
+      --off: #f2f4f0;
+      --white: #ffffff;
+      --muted: #6b7a70;
+      --dark: #111a14;
+      --display: 'Cormorant Garamond', Georgia, serif;
+      --body: 'Outfit', sans-serif;
+      --r: 14px;
+      --r-sm: 8px;
+      --shadow: 0 4px 28px rgba(10,31,60,0.10);
+      --shadow-lg: 0 16px 56px rgba(10,31,60,0.18);
+      --ease: 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ===================== RESET ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body); color: var(--dark); background: var(--white); line-height: 1.7; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    .sec { padding: 96px 0; }
+    .sec-alt { background: var(--cream); }
+    .sec-dark { background: var(--forest); }
+    .sec-navy { background: var(--navy); }
+
+    /* ===================== TYPOGRAPHY ===================== */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; margin-bottom: 14px;
+      color: var(--forest-bright);
+    }
+    .eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--forest-bright); border-radius: 2px; }
+    .eyebrow.light { color: var(--leaf); }
+    .eyebrow.light::before { background: var(--leaf); }
+    .eyebrow.gold { color: var(--gold); }
+    .eyebrow.gold::before { background: var(--gold); }
+    h2.display {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+    h2.display.white { color: var(--white); }
+    .lead { font-size: 1.05rem; color: var(--muted); max-width: 600px; line-height: 1.85; }
+    .lead.center { margin: 0 auto 48px; text-align: center; }
+    .lead.white { color: rgba(255,255,255,0.72); }
+    .center-block { text-align: center; }
+
+    /* ===================== BUTTONS ===================== */
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 13px 26px; border-radius: var(--r-sm);
+      font-family: var(--body); font-weight: 600; font-size: 0.9rem;
+      cursor: pointer; border: 2px solid transparent;
+      transition: var(--ease); white-space: nowrap;
+    }
+    .btn-forest { background: var(--forest-mid); color: var(--white); border-color: var(--forest-mid); }
+    .btn-forest:hover { background: var(--forest); border-color: var(--forest); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15,51,32,0.3); }
+    .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.5); }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+    .btn-white { background: var(--white); color: var(--forest); border-color: var(--white); font-weight: 700; }
+    .btn-white:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+    .btn-gold:hover { background: #a87020; transform: translateY(-2px); }
+    .btn-lg { padding: 16px 32px; font-size: 0.95rem; }
+
+    /* ===================== HEADER ===================== */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,31,60,0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: var(--ease);
+    }
+    #header.scrolled { background: var(--navy); box-shadow: 0 4px 40px rgba(0,0,0,0.35); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 12px; }
+    .logo-wrap { display: flex; align-items: center; gap: 12px; }
+    .logo-box {
+      width: 50px; height: 50px;
+      background: rgba(255,255,255,0.08);
+      border: 2px solid rgba(77,200,128,0.35);
+      border-radius: 10px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .logo-box img { width: 100%; height: 100%; object-fit: contain; }
+    .logo-name { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--white); letter-spacing: 0.04em; line-height: 1.1; }
+    .logo-tag { font-size: 0.5rem; color: var(--leaf); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
+    .nav-menu { display: flex; align-items: center; gap: 2px; }
+    .nav-a {
+      color: rgba(255,255,255,0.72); font-size: 0.88rem; font-weight: 500;
+      padding: 8px 14px; border-radius: 8px; transition: var(--ease);
+      position: relative;
+    }
+    .nav-a:hover { color: var(--white); background: rgba(255,255,255,0.07); }
+    .nav-a.active { color: var(--leaf); }
+    .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+    .burger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: var(--ease); }
+
+    /* ===================== HERO ===================== */
+    #hero {
+      min-height: 100vh; display: flex; align-items: center;
+      position: relative; overflow: hidden; padding-top: 74px;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(145deg, #061526 0%, #0a1f3c 35%, #0c2a18 70%, #061a10 100%);
+    }
+    .hero-grain {
+      position: absolute; inset: 0; opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    .hero-glow {
+      position: absolute;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(40,160,96,0.12) 0%, transparent 65%);
+      top: 50%; right: 5%; transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .hero-glow2 {
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,146,42,0.07) 0%, transparent 60%);
+      bottom: 10%; left: 10%;
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; padding: 80px 0; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(77,200,128,0.12); border: 1px solid rgba(77,200,128,0.3);
+      color: var(--leaf); font-size: 0.78rem; font-weight: 500;
+      padding: 8px 18px; border-radius: 100px; margin-bottom: 28px;
+      letter-spacing: 0.04em; animation: fadeUp 0.8s ease both;
+    }
+    .hero-title {
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 6.5vw, 5rem);
+      font-weight: 700; color: var(--white); line-height: 1.1;
+      margin-bottom: 22px; max-width: 760px;
+      animation: fadeUp 0.9s ease 0.1s both;
+    }
+    .hero-title .accent { color: var(--leaf); font-style: italic; }
+    .hero-sub {
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      color: rgba(255,255,255,0.65); max-width: 540px; line-height: 1.85;
+      margin-bottom: 42px; animation: fadeUp 0.9s ease 0.2s both;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 64px; animation: fadeUp 0.9s ease 0.3s both; }
+    .hero-stats { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; animation: fadeUp 0.9s ease 0.4s both; }
+    .hstat { display: flex; flex-direction: column; }
+    .hstat-n { font-family: var(--display); font-size: 1.6rem; font-weight: 700; color: var(--white); }
+    .hstat-l { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; }
+    .hstat-div { width: 1px; height: 44px; background: rgba(255,255,255,0.12); }
+    .hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.3); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; animation: fadeIn 2s ease 1.5s both; }
+    .scroll-bar { width: 1px; height: 44px; background: linear-gradient(to bottom, rgba(77,200,128,0.6), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+
+    /* ===================== AGRI SECTION ===================== */
+    .agri-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .agri-pillars { display: flex; flex-direction: column; gap: 18px; margin: 28px 0; }
+    .pillar { display: flex; align-items: flex-start; gap: 16px; padding: 18px; background: var(--white); border-radius: 12px; border: 1px solid rgba(28,84,54,0.12); transition: var(--ease); }
+    .sec-alt .pillar { background: var(--off); }
+    .pillar:hover { border-color: var(--forest-bright); transform: translateX(5px); }
+    .pillar-icon { width: 42px; height: 42px; background: rgba(40,160,96,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--forest-mid); font-size: 1rem; flex-shrink: 0; }
+    .pillar strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+    .pillar p { font-size: 0.82rem; color: var(--muted); line-height: 1.55; margin: 0; }
+    .prod-mosaic { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .prod-tile {
+      border-radius: 12px; padding: 18px 12px 14px;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      font-size: 0.78rem; font-weight: 600; color: var(--navy);
+      background: var(--white); border: 1px solid var(--off);
+      box-shadow: var(--shadow); transition: var(--ease); cursor: default;
+      text-align: center;
+    }
+    .sec-alt .prod-tile { background: var(--off); }
+    .prod-tile:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--forest-bright); }
+    .prod-tile .emoji { font-size: 2rem; }
+    .prod-tile .swatch { width: 100%; height: 48px; border-radius: 8px; margin-bottom: 2px; }
+
+    /* ===================== WHY US ===================== */
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 52px; }
+    .why-card { padding: 32px 24px; border-radius: var(--r); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); transition: var(--ease); }
+    .why-card:hover { background: rgba(255,255,255,0.10); transform: translateY(-5px); }
+    .why-ico { width: 52px; height: 52px; background: rgba(77,200,128,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--leaf); font-size: 1.3rem; margin-bottom: 18px; }
+    .why-card h4 { font-family: var(--display); color: var(--white); font-size: 1.1rem; margin-bottom: 8px; }
+    .why-card p { font-size: 0.84rem; color: rgba(255,255,255,0.58); line-height: 1.7; }
+
+    /* ===================== PRODUCTS CATALOGUE ===================== */
+    .catalogue-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+    .cat-card { border-radius: var(--r); overflow: hidden; background: var(--white); box-shadow: var(--shadow); border: 1px solid var(--off); transition: var(--ease); }
+    .cat-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); border-color: var(--forest-bright); }
+    .cat-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 3.2rem; }
+    .cat-body { padding: 22px 22px 24px; }
+    .cat-body h4 { font-family: var(--display); color: var(--navy); font-size: 1.1rem; margin-bottom: 8px; }
+    .cat-body p { font-size: 0.83rem; color: var(--muted); line-height: 1.7; margin-bottom: 14px; }
+    .cat-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .ctag { background: rgba(40,160,96,0.1); color: var(--forest-mid); font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 100px; letter-spacing: 0.04em; }
+
+    /* ===================== QUALITY PROCESS ===================== */
+    .process-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 52px; position: relative; }
+    .process-row::before { content: ''; position: absolute; top: 26px; left: 8%; right: 8%; height: 2px; background: linear-gradient(to right, var(--forest-bright), var(--navy-light)); z-index: 0; }
+    .pstep { text-align: center; position: relative; z-index: 1; }
+    .pstep-ball { width: 52px; height: 52px; border-radius: 50%; background: var(--white); border: 3px solid var(--forest-bright); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin: 0 auto 14px; box-shadow: var(--shadow); position: relative; }
+    .pstep-n { position: absolute; top: -8px; right: -8px; width: 20px; height: 20px; background: var(--forest-bright); color: white; font-size: 0.62rem; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .pstep h5 { font-weight: 600; font-size: 0.88rem; color: var(--navy); margin-bottom: 5px; }
+    .pstep p { font-size: 0.76rem; color: var(--muted); line-height: 1.55; }
+
+    /* ===================== SERVICES ===================== */
+    .svc-blocks { display: flex; flex-direction: column; gap: 0; }
+    .svc-block { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 72px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .svc-block:last-child { border-bottom: none; }
+    .svc-block.flip { direction: rtl; }
+    .svc-block.flip > * { direction: ltr; }
+    .svc-visual { border-radius: var(--r); padding: 56px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 300px; }
+    .svc-big { font-size: 64px; margin-bottom: 14px; }
+    .svc-visual h3 { font-family: var(--display); font-size: 1.3rem; color: white; margin-bottom: 8px; }
+    .svc-visual p { color: rgba(255,255,255,0.7); font-size: 0.88rem; }
+    .svc-items { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .svc-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px; border-radius: 10px; border: 1px solid var(--off); background: var(--white); transition: var(--ease); }
+    .sec-alt .svc-item { background: var(--off); }
+    .svc-item:hover { border-color: var(--forest-bright); transform: translateX(4px); }
+    .svc-item i { color: var(--forest-bright); font-size: 0.95rem; margin-top: 4px; flex-shrink: 0; }
+    .svc-item strong { display: block; font-size: 0.88rem; color: var(--navy); margin-bottom: 2px; }
+    .svc-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin: 0; }
+
+    /* ===================== ABOUT ===================== */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .info-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .info-table tr { border-bottom: 1px solid var(--off); }
+    .info-table td { padding: 14px 0; font-size: 0.88rem; }
+    .info-table td:first-child { color: var(--muted); width: 42%; font-weight: 500; }
+    .info-table td:last-child { color: var(--navy); font-weight: 600; }
+    .mv-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+    .mv-card { border-radius: 12px; padding: 28px 24px; }
+    .mv-card.m { background: linear-gradient(135deg, var(--forest), var(--forest-mid)); }
+    .mv-card.v { background: linear-gradient(135deg, var(--navy), var(--navy-light)); }
+    .mv-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .mv-card h4 { font-family: var(--display); color: white; font-size: 1.1rem; margin-bottom: 8px; }
+    .mv-card p { color: rgba(255,255,255,0.76); font-size: 0.84rem; line-height: 1.7; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
+    .val-card { background: var(--off); border-radius: 10px; padding: 22px 18px; border: 1px solid transparent; transition: var(--ease); }
+    .val-card:hover { border-color: var(--forest-bright); transform: translateY(-3px); }
+    .val-card .vi { font-size: 1.5rem; margin-bottom: 10px; }
+    .val-card h5 { font-weight: 600; color: var(--navy); margin-bottom: 5px; font-size: 0.88rem; }
+    .val-card p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ===================== TEAM ===================== */
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px; }
+    .team-card { background: var(--white); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--off); transition: var(--ease); }
+    .team-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); }
+    .team-photo { height: 220px; background: linear-gradient(135deg, var(--navy), var(--forest)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .team-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .photo-ph { font-size: 4rem; color: rgba(255,255,255,0.2); }
+    .photo-hint { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.4); color: rgba(255,255,255,0.5); font-size: 0.64rem; text-align: center; padding: 5px; }
+    .team-body { padding: 20px 22px 24px; }
+    .team-body h4 { font-family: var(--display); color: var(--navy); font-size: 1.1rem; margin-bottom: 3px; }
+    .team-role { font-size: 0.75rem; color: var(--forest-bright); font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 10px; }
+    .team-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
+    /* ===================== CONTACT ===================== */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
+    .cinfo-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+    .cinfo { display: flex; gap: 16px; align-items: flex-start; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; transition: var(--ease); }
+    .cinfo:hover { background: rgba(255,255,255,0.09); border-color: rgba(77,200,128,0.3); }
+    .cinfo-ico { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; background: rgba(77,200,128,0.15); color: var(--leaf); }
+    .cinfo h5 { font-weight: 600; color: var(--white); font-size: 0.88rem; margin-bottom: 4px; }
+    .cinfo p, .cinfo a { font-size: 0.84rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    .cinfo a:hover { color: var(--leaf); }
+    .form-box { background: var(--white); border-radius: var(--r); padding: 40px; box-shadow: var(--shadow-lg); }
+    .form-box h3 { font-family: var(--display); color: var(--navy); font-size: 1.5rem; margin-bottom: 4px; }
+    .form-box .sub { font-size: 0.84rem; color: var(--muted); margin-bottom: 28px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fgroup { display: flex; flex-direction: column; gap: 5px; margin-bottom: 16px; }
+    .fgroup label { font-size: 0.78rem; font-weight: 600; color: var(--navy); }
+    .fgroup input, .fgroup select, .fgroup textarea {
+      border: 2px solid var(--off); border-radius: var(--r-sm);
+      padding: 11px 14px; font-family: var(--body); font-size: 0.88rem;
+      color: var(--dark); transition: var(--ease); outline: none;
+      background: var(--cream);
+    }
+    .fgroup input:focus, .fgroup select:focus, .fgroup textarea:focus {
+      border-color: var(--forest-bright); background: var(--white);
+      box-shadow: 0 0 0 3px rgba(40,160,96,0.1);
+    }
+    .fgroup textarea { resize: vertical; min-height: 120px; }
+    .form-submit-btn { width: 100%; justify-content: center; padding: 14px; font-size: 0.95rem; }
+    .fnote { font-size: 0.74rem; color: var(--muted); text-align: center; margin-top: 10px; }
+    .success-alert { display: none; background: rgba(40,160,96,0.1); border: 1px solid var(--forest-bright); border-radius: 8px; padding: 14px; text-align: center; color: var(--forest); font-size: 0.88rem; margin-top: 14px; }
+
+    /* ===================== CTA BANNER ===================== */
+    .cta-band { position: relative; padding: 80px 0; text-align: center; overflow: hidden; }
+    .cta-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--forest), var(--forest-mid), var(--navy-mid)); }
+    .cta-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(77,200,128,0.15) 0%, transparent 65%); }
+    .cta-content { position: relative; z-index: 2; }
+    .cta-content h2 { font-family: var(--display); color: var(--white); font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 14px; }
+    .cta-content p { color: rgba(255,255,255,0.72); font-size: 1rem; max-width: 500px; margin: 0 auto 32px; }
+    .cta-feats { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 32px; }
+    .cfeat { display: flex; align-items: center; gap: 7px; color: rgba(255,255,255,0.85); font-size: 0.84rem; font-weight: 500; }
+    .cfeat i { color: var(--leaf); }
+
+    /* ===================== FOOTER ===================== */
+    footer { background: var(--dark); color: rgba(255,255,255,0.6); }
+    .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; padding: 64px 0 48px; }
+    .fl-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .fl-logo-box { width: 44px; height: 44px; background: rgba(255,255,255,0.08); border: 1px solid rgba(77,200,128,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; overflow: hidden; }
+    .fl-logo-box img { width: 100%; height: 100%; object-fit: contain; }
+    .fl-name { font-family: var(--display); color: var(--white); font-size: 0.95rem; font-weight: 700; }
+    .fl-sub { font-size: 0.5rem; color: var(--leaf); letter-spacing: 0.12em; text-transform: uppercase; }
+    .fl-about { font-size: 0.84rem; line-height: 1.75; margin-bottom: 10px; }
+    .fl-rc { font-size: 0.74rem; color: rgba(255,255,255,0.3); }
+    .fl-col h6 { color: var(--white); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+    .fl-col ul li { margin-bottom: 9px; }
+    .fl-col ul a { font-size: 0.84rem; color: rgba(255,255,255,0.5); transition: var(--ease); }
+    .fl-col ul a:hover { color: var(--leaf); padding-left: 4px; }
+    .fc-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+    .fc-item i { color: var(--leaf); margin-top: 3px; flex-shrink: 0; font-size: 0.85rem; }
+    .fc-item span, .fc-item a { font-size: 0.84rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .fc-item a:hover { color: var(--leaf); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); }
+    .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; font-size: 0.74rem; flex-wrap: wrap; gap: 8px; }
+
+    /* ===================== WHATSAPP ===================== */
+    .wa-float {
+      position: fixed; bottom: 26px; right: 26px;
+      width: 54px; height: 54px; background: #25d366;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: white; z-index: 999;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: var(--ease);
+    }
+    .wa-float:hover { transform: scale(1.12); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
+
+    /* ===================== SCROLL REVEAL ===================== */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===================== ANIMATIONS ===================== */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes scrollPulse { 0%,100% { opacity:0.4; transform:scaleY(1); } 50% { opacity:1; transform:scaleY(1.15); } }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media(max-width:1024px) {
+      .agri-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+      .catalogue-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .process-row { grid-template-columns: repeat(3,1fr); }
+      .process-row::before { display: none; }
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    @media(max-width:768px) {
+      .nav-menu, .nav-cta-btn { display: none; }
+      .burger { display: flex; }
+      .nav-menu.open {
+        display: flex; flex-direction: column;
+        position: fixed; top: 74px; left: 0; right: 0;
+        background: var(--navy); padding: 20px 28px;
+        gap: 4px; border-bottom: 1px solid rgba(255,255,255,0.08);
+        z-index: 999;
+      }
+      .hero-btns { flex-direction: column; }
+      .svc-block, .svc-block.flip { grid-template-columns: 1fr; direction: ltr; }
+      .catalogue-grid, .team-grid { grid-template-columns: 1fr; }
+      .mv-cards, .values-grid { grid-template-columns: 1fr; }
+      .footer-main { grid-template-columns: 1fr; }
+      .footer-bottom-inner { flex-direction: column; text-align: center; }
+      .frow { grid-template-columns: 1fr; }
+      .form-box { padding: 28px 20px; }
+      .prod-mosaic { grid-template-columns: repeat(2,1fr); }
+      .process-row { grid-template-columns: repeat(2,1fr); }
+      .sec { padding: 64px 0; }
+    }
+    @media(max-width:480px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; }
+      .hstat-div { display: none; }
+      .cta-feats { flex-direction: column; align-items: center; }
+      .process-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <nav class="nav container">
+      <a href="#hero" class="logo-wrap">
+        <div class="logo-box">
+          <img src="assets/logo.png" alt="ASMEEMAM Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='🌾';" />
+        </div>
+        <div>
+          <div class="logo-name">ASMEEMAM</div>
+          <div class="logo-tag">General Enterprises Limited</div>
+        </div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-a">Home</a></li>
+        <li><a href="#agriculture" class="nav-a">Agriculture</a></li>
+        <li><a href="#products" class="nav-a">Products</a></li>
+        <li><a href="#services" class="nav-a">Services</a></li>
+        <li><a href="#about" class="nav-a">About</a></li>
+        <li><a href="#contact" class="nav-a">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-forest nav-cta-btn" style="font-size:0.82rem;padding:10px 20px;">Get a Quote</a>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">🌍 Nigeria's Trusted Agricultural & Trade Partner</div>
+      <h1 class="hero-title">Leading Agricultural &amp;<br><span class="accent">Global Trade</span> Solutions</h1>
+      <p class="hero-sub">Exporting quality agricultural produce and delivering reliable trade services worldwide — from the heart of Kano, Nigeria.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-forest btn-lg"><i class="fas fa-seedling"></i> Explore Agricultural Products</a>
+        <a href="#contact" class="btn btn-outline btn-lg"><i class="fas fa-envelope"></i> Contact Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-n">100+</span><span class="hstat-l">Export Partners</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">9+</span><span class="hstat-l">Product Categories</span></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><span class="hstat-n">RC 9365843</span><span class="hstat-l">CAC Registered</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ============ AGRICULTURE FEATURE ============ -->
+  <section id="agriculture" class="sec sec-alt">
+    <div class="container">
+      <div class="agri-grid">
+        <div>
+          <div class="eyebrow">🌾 Our Core Business</div>
+          <h2 class="display">Agricultural Export &amp; Supply</h2>
+          <p class="lead">We source, aggregate, and export premium quality agricultural produce from Nigeria's most fertile regions — fully compliant with international export standards.</p>
+          <div class="agri-pillars reveal">
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-tractor"></i></div><div><strong>Local Aggregation</strong><p>Direct sourcing from Nigerian farmers and cooperatives across the North</p></div></div>
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-ship"></i></div><div><strong>International Export</strong><p>Bulk export to global markets with full documentation and compliance</p></div></div>
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-certificate"></i></div><div><strong>Quality Compliance</strong><p>Graded, cleaned, and packed to international buyer standards</p></div></div>
+            <div class="pillar"><div class="pillar-icon"><i class="fas fa-route"></i></div><div><strong>Reliable Distribution</strong><p>Robust supply chain from farm gate to final destination worldwide</p></div></div>
+          </div>
+          <a href="#products" class="btn btn-forest" style="margin-top:28px;"><i class="fas fa-arrow-down"></i> View All Products</a>
+        </div>
+        <div class="reveal">
+          <h4 style="font-family:var(--display);color:var(--navy);font-size:1.1rem;margin-bottom:18px;font-weight:600;">Key Export Products</h4>
+          <div class="prod-mosaic">
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#f5e060,#c89010);"></div><span>🌽 Maize</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#e8d090,#b08040);"></div><span>🌱 Sesame</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#c87030,#7b3a10);"></div><span>🫚 Ginger</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#f0e8c0,#a09040);"></div><span>🍚 Rice</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#70c040,#305020);"></div><span>🫘 Legumes</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#d0b080,#906030);"></div><span>🥜 Groundnuts</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#e04060,#801030);"></div><span>🌺 Hibiscus</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#906040,#502010);"></div><span>🥜 Tiger Nuts</span></div>
+            <div class="prod-tile"><div class="swatch" style="background:linear-gradient(135deg,#408060,#204030);"></div><span>🌾 Cash Crops</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="sec sec-navy">
+    <div class="container center-block">
+      <div class="eyebrow light" style="justify-content:center;">Why Choose Us</div>
+      <h2 class="display white" style="text-align:center;">Your Trusted Nigerian Trade Partner</h2>
+      <div class="why-grid">
+        <div class="why-card reveal"><div class="why-ico"><i class="fas fa-handshake"></i></div><h4>Trusted &amp; Registered</h4><p>Fully incorporated with CAC (RC 9365843), operating transparently with all legal requirements fulfilled.</p></div>
+        <div class="why-card reveal"><div class="why-ico"><i class="fas fa-globe-africa"></i></div><h4>Global Reach</h4><p>Strong connections with international buyers and logistics partners across Europe, Asia, and the Middle East.</p></div>
+        <div class="why-card reveal"><div class="why-ico"><i class="fas fa-award"></i></div><h4>Quality Assurance</h4><p>Every product batch is graded, inspected, and certified before leaving our facilities.</p></div>
+        <div class="why-card reveal"><div class="why-ico"><i class="fas fa-boxes-stacking"></i></div><h4>Bulk Capability</h4><p>We handle large-volume orders from 1MT to 500MT+ efficiently through our aggregation network.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS CATALOGUE ============ -->
+  <section id="products" class="sec">
+    <div class="container">
+      <div class="center-block">
+        <div class="eyebrow" style="justify-content:center;">What We Export</div>
+        <h2 class="display" style="text-align:center;">Our Product Catalogue</h2>
+        <p class="lead center">All products available in bulk quantities for export and domestic supply.</p>
+      </div>
+      <div class="catalogue-grid">
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#f5d040,#9a6808);">🌽</div><div class="cat-body"><h4>Maize (Corn)</h4><p>Yellow and white maize varieties from Nigeria's premier grain belts. Dried, cleaned, export-ready.</p><div class="cat-tags"><span class="ctag">Yellow Maize</span><span class="ctag">White Maize</span><span class="ctag">Bulk Available</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#ecdba0,#a07830);">🌱</div><div class="cat-body"><h4>Sesame Seeds</h4><p>Premium white and brown sesame seeds. Hulled and natural, cleaned to high purity for global buyers.</p><div class="cat-tags"><span class="ctag">White Sesame</span><span class="ctag">Natural Sesame</span><span class="ctag">Export Grade</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#c87030,#7b3a10);">🫚</div><div class="cat-body"><h4>Ginger</h4><p>Dried split &amp; whole ginger from Kaduna and Nasarawa. High in essential oils, sought by global processors.</p><div class="cat-tags"><span class="ctag">Dried</span><span class="ctag">Split</span><span class="ctag">Whole</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#f0e8c0,#a09040);">🍚</div><div class="cat-body"><h4>Rice</h4><p>Locally grown long-grain and parboiled rice, available in various grades and packaging options.</p><div class="cat-tags"><span class="ctag">Long Grain</span><span class="ctag">Parboiled</span><span class="ctag">50kg Bags</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#70c040,#305020);">🫘</div><div class="cat-body"><h4>Legumes (Cowpea / Beans)</h4><p>Cowpea, soybeans, and other legumes. High-protein, well-sorted, international export standards.</p><div class="cat-tags"><span class="ctag">Cowpea</span><span class="ctag">Soybeans</span><span class="ctag">Brown Beans</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#d0b080,#906030);">🥜</div><div class="cat-body"><h4>Groundnuts (Peanuts)</h4><p>Shelled and unshelled groundnuts. Used in food processing, oil extraction, and direct export.</p><div class="cat-tags"><span class="ctag">Shelled</span><span class="ctag">Unshelled</span><span class="ctag">Raw</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#e04060,#801030);">🌺</div><div class="cat-body"><h4>Hibiscus (Roselle)</h4><p>Dried hibiscus flowers for beverage production worldwide. Premium grade, deeply colored, properly dried.</p><div class="cat-tags"><span class="ctag">Dried</span><span class="ctag">Grade A</span><span class="ctag">Export Ready</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#906040,#502010);">🥜</div><div class="cat-body"><h4>Tiger Nuts</h4><p>Dried tiger nuts (Hausa groundnut / Aya) from northern Nigeria. Clean, sorted bulk quantities.</p><div class="cat-tags"><span class="ctag">Dried</span><span class="ctag">Sorted</span><span class="ctag">Bulk</span></div></div></div>
+        <div class="cat-card reveal"><div class="cat-img" style="background:linear-gradient(135deg,#408060,#1a3020);">🌾</div><div class="cat-body"><h4>Other Cash Crops</h4><p>Sorghum, millet, turmeric, and more. Contact us with your specific commodity requirements.</p><div class="cat-tags"><span class="ctag">Sorghum</span><span class="ctag">Millet</span><span class="ctag">Custom Orders</span></div></div></div>
+      </div>
+
+      <!-- Quality Process -->
+      <div style="margin-top:80px;" class="center-block">
+        <div class="eyebrow" style="justify-content:center;">Our Standards</div>
+        <h2 class="display" style="text-align:center;">Quality Assurance Process</h2>
+        <div class="process-row">
+          <div class="pstep reveal"><div class="pstep-ball"><div class="pstep-n">1</div>🌿</div><h5>Farm Sourcing</h5><p>Direct from trusted farmers and cooperatives across Nigeria</p></div>
+          <div class="pstep reveal"><div class="pstep-ball"><div class="pstep-n">2</div>🔍</div><h5>Inspection &amp; Sorting</h5><p>Every batch manually inspected, sorted, and graded</p></div>
+          <div class="pstep reveal"><div class="pstep-ball"><div class="pstep-n">3</div>🧹</div><h5>Cleaning &amp; Drying</h5><p>Machine cleaned, sun-dried to correct moisture content</p></div>
+          <div class="pstep reveal"><div class="pstep-ball"><div class="pstep-n">4</div>📦</div><h5>Export Packaging</h5><p>Professional bags, sacks, or containers as required</p></div>
+          <div class="pstep reveal"><div class="pstep-ball"><div class="pstep-n">5</div>🚢</div><h5>Shipping</h5><p>Full documentation, customs clearance, coordinated shipping</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="sec sec-alt">
+    <div class="container">
+      <div class="center-block">
+        <div class="eyebrow" style="justify-content:center;">What We Do</div>
+        <h2 class="display" style="text-align:center;">Full-Service Trading</h2>
+        <p class="lead center">Beyond agriculture — comprehensive solutions for Nigeria's import, export, and industrial supply needs.</p>
+      </div>
+      <div class="svc-blocks">
+        <!-- General Trading -->
+        <div class="svc-block" id="general">
+          <div>
+            <div class="eyebrow gold">General Commerce</div>
+            <h3 style="font-family:var(--display);font-size:1.8rem;color:var(--navy);margin-bottom:12px;">General Trading</h3>
+            <p style="color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:8px;">A reliable partner for the supply of consumer goods, food products, beverages, and textiles for domestic and cross-border distribution.</p>
+            <div class="svc-items reveal">
+              <div class="svc-item"><i class="fas fa-shopping-cart"></i><div><strong>Consumer Goods</strong><p>Fast-moving consumer goods for retail and wholesale distribution</p></div></div>
+              <div class="svc-item"><i class="fas fa-utensils"></i><div><strong>Food Items &amp; Beverages</strong><p>Packaged foods, non-alcoholic beverages, and dry goods</p></div></div>
+              <div class="svc-item"><i class="fas fa-tshirt"></i><div><strong>Textiles &amp; Clothing</strong><p>Fabric, garments, and clothing accessories import &amp; distribution</p></div></div>
+              <div class="svc-item"><i class="fas fa-arrows-left-right"></i><div><strong>Import &amp; Export Distribution</strong><p>Reliable sourcing and delivery across Nigerian and international markets</p></div></div>
+            </div>
+          </div>
+          <div class="svc-visual reveal" style="background:linear-gradient(135deg,var(--navy),var(--navy-light));">
+            <div class="svc-big">🏪</div>
+            <h3>General Trading</h3>
+            <p>Consumer goods supply across domestic and international markets</p>
+          </div>
+        </div>
+        <!-- Industrial -->
+        <div class="svc-block flip" id="industrial">
+          <div>
+            <div class="eyebrow gold">Industrial Supply</div>
+            <h3 style="font-family:var(--display);font-size:1.8rem;color:var(--navy);margin-bottom:12px;">Industrial &amp; Building Materials</h3>
+            <p style="color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:8px;">Quality industrial equipment and building materials for construction firms, manufacturers, and facility managers across Nigeria.</p>
+            <div class="svc-items reveal">
+              <div class="svc-item"><i class="fas fa-gears"></i><div><strong>Machinery &amp; Spare Parts</strong><p>Industrial machinery components and compatible spare parts</p></div></div>
+              <div class="svc-item"><i class="fas fa-bolt"></i><div><strong>Electrical Appliances</strong><p>Commercial and industrial electrical equipment and accessories</p></div></div>
+              <div class="svc-item"><i class="fas fa-flask"></i><div><strong>Chemicals</strong><p>Industrial chemicals for manufacturing, agriculture, and processing</p></div></div>
+              <div class="svc-item"><i class="fas fa-helmet-safety"></i><div><strong>Construction Materials</strong><p>Building materials, hardware, and construction supplies in bulk</p></div></div>
+            </div>
+          </div>
+          <div class="svc-visual reveal" style="background:linear-gradient(135deg,#5a2a08,#a06020);">
+            <div class="svc-big">🏭</div>
+            <h3>Industrial Supply</h3>
+            <p>Quality materials for construction and industry</p>
+          </div>
+        </div>
+        <!-- Logistics -->
+        <div class="svc-block" id="logistics">
+          <div>
+            <div class="eyebrow">Logistics &amp; Trade</div>
+            <h3 style="font-family:var(--display);font-size:1.8rem;color:var(--navy);margin-bottom:12px;">Logistics &amp; Supply Chain</h3>
+            <p style="color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:8px;">End-to-end logistics support — from procurement and warehousing to haulage, shipping, and full trade documentation.</p>
+            <div class="svc-items reveal">
+              <div class="svc-item"><i class="fas fa-handshake"></i><div><strong>Procurement Support</strong><p>Sourcing and purchasing of goods on behalf of clients</p></div></div>
+              <div class="svc-item"><i class="fas fa-warehouse"></i><div><strong>Warehousing</strong><p>Secure short and long-term storage in Kano</p></div></div>
+              <div class="svc-item"><i class="fas fa-truck"></i><div><strong>Haulage &amp; Transport</strong><p>Domestic trucking and inter-state delivery services</p></div></div>
+              <div class="svc-item"><i class="fas fa-file-contract"></i><div><strong>Shipping &amp; Documentation</strong><p>Port coordination, customs clearance, and all export docs</p></div></div>
+            </div>
+          </div>
+          <div class="svc-visual reveal" style="background:linear-gradient(135deg,#1a3548,#1c5436);">
+            <div class="svc-big">🚚</div>
+            <h3>Logistics &amp; Supply Chain</h3>
+            <p>From warehouse to world — we manage the journey</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="sec">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left: Company Info -->
+        <div>
+          <div class="eyebrow">Who We Are</div>
+          <h2 class="display">About ASMEEMAM</h2>
+          <p class="lead">A fully registered Nigerian trading company with deep roots in Kano — Nigeria's commercial heartland. We combine local market knowledge with international trade expertise.</p>
+          <table class="info-table reveal">
+            <tr><td>Company Name</td><td>ASMEEMAM GENERAL ENTERPRISES LIMITED</td></tr>
+            <tr><td>RC Number</td><td>RC 9365843</td></tr>
+            <tr><td>Incorporated</td><td>February 24, 2026</td></tr>
+            <tr><td>Registered Office</td><td>No. 146, Hotoro Maiduguri Road, Opposite Depot, Kano, Kano State, Nigeria</td></tr>
+            <tr><td>Email</td><td><a href="mailto:ASMAAIMAM01@GMAIL.COM" style="color:var(--forest-bright)">ASMAAIMAM01@GMAIL.COM</a></td></tr>
+            <tr><td>Core Business</td><td>Agricultural Export &amp; General Trade</td></tr>
+            <tr><td>Country</td><td>Nigeria 🇳🇬</td></tr>
+          </table>
+          <div class="mv-cards reveal">
+            <div class="mv-card m"><div class="mv-icon">🎯</div><h4>Our Mission</h4><p>To promote sustainable agricultural trade while delivering excellence in global sourcing, distribution, and supply chain management.</p></div>
+            <div class="mv-card v"><div class="mv-icon">🔭</div><h4>Our Vision</h4><p>To become a leading Nigerian exporter of high-quality agricultural produce — connecting Nigeria to the world.</p></div>
+          </div>
+        </div>
+        <!-- Right: Values -->
+        <div>
+          <div class="eyebrow">What Drives Us</div>
+          <h2 class="display">Our Core Values</h2>
+          <div class="values-grid reveal">
+            <div class="val-card"><div class="vi">🤝</div><h5>Integrity</h5><p>Every deal and relationship built on honesty and transparency.</p></div>
+            <div class="val-card"><div class="vi">⭐</div><h5>Quality</h5><p>We never compromise on product quality from sourcing to delivery.</p></div>
+            <div class="val-card"><div class="vi">🌱</div><h5>Sustainability</h5><p>Responsible farming and trade practices that benefit communities.</p></div>
+            <div class="val-card"><div class="vi">⚡</div><h5>Reliability</h5><p>Our clients count on us to deliver on time, every time.</p></div>
+            <div class="val-card"><div class="vi">🌍</div><h5>Global Mindset</h5><p>Operating locally with a global perspective and international standards.</p></div>
+            <div class="val-card"><div class="vi">📈</div><h5>Growth</h5><p>Committed to continuous improvement for our company and clients.</p></div>
+          </div>
+          <!-- Team -->
+          <div style="margin-top:48px;">
+            <div class="eyebrow">Key Personnel</div>
+            <h3 style="font-family:var(--display);color:var(--navy);font-size:1.5rem;margin-bottom:20px;">Our Leadership</h3>
+            <div class="team-grid">
+              <div class="team-card reveal">
+                <div class="team-photo">
+                  <img src="assets/person1.jpg" alt="CEO" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                  <div class="photo-ph" style="display:none;">👤</div>
+                  <div class="photo-hint">Replace: assets/person1.jpg</div>
+                </div>
+                <div class="team-body"><h4>Name Here</h4><div class="team-role">Managing Director / CEO</div><p class="team-bio">Leads the company's strategic direction and international trade operations with deep expertise in Nigerian agricultural markets.</p></div>
+              </div>
+              <div class="team-card reveal">
+                <div class="team-photo">
+                  <img src="assets/person2.jpg" alt="Head of Agri" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                  <div class="photo-ph" style="display:none;">👤</div>
+                  <div class="photo-hint">Replace: assets/person2.jpg</div>
+                </div>
+                <div class="team-body"><h4>Name Here</h4><div class="team-role">Head of Agricultural Operations</div><p class="team-bio">Oversees sourcing, quality control, and supply chain across Nigeria's key agricultural producing zones.</p></div>
+              </div>
+              <div class="team-card reveal">
+                <div class="team-photo">
+                  <img src="assets/person3.jpg" alt="Trade Director" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+                  <div class="photo-ph" style="display:none;">👤</div>
+                  <div class="photo-hint">Replace: assets/person3.jpg</div>
+                </div>
+                <div class="team-body"><h4>Name Here</h4><div class="team-role">Director of Trade &amp; Logistics</div><p class="team-bio">Manages export documentation, shipping coordination, and international buyer relationships.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="cta-bg"></div>
+    <div class="cta-glow"></div>
+    <div class="container cta-content">
+      <h2>Ready to Source Nigerian Agricultural Produce?</h2>
+      <p>Contact our export team today for bulk pricing, product samples, and shipping details.</p>
+      <div class="cta-feats">
+        <span class="cfeat"><i class="fas fa-check-circle"></i> Minimum Order: 1 MT</span>
+        <span class="cfeat"><i class="fas fa-check-circle"></i> FOB, CIF, CNF Terms Available</span>
+        <span class="cfeat"><i class="fas fa-check-circle"></i> Full Documentation Support</span>
+      </div>
+      <a href="#contact" class="btn btn-white btn-lg">Send Us an Inquiry <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="sec sec-navy">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Left: Info -->
+        <div>
+          <div class="eyebrow light">Get in Touch</div>
+          <h2 class="display white">We're Here to Help</h2>
+          <p class="lead white">Whether you're an international buyer, local supplier, or business partner — our team is ready to assist with any inquiry.</p>
+          <div class="cinfo-cards">
+            <div class="cinfo"><div class="cinfo-ico"><i class="fas fa-map-marker-alt"></i></div><div><h5>Our Office</h5><p>No. 146, Hotoro Maiduguri Road, Opposite Depot,<br>Kano, Kano State, Nigeria</p></div></div>
+            <div class="cinfo"><div class="cinfo-ico"><i class="fas fa-envelope"></i></div><div><h5>Email Address</h5><a href="mailto:ASMAAIMAM01@GMAIL.COM">ASMAAIMAM01@GMAIL.COM</a><p style="margin-top:3px;">We typically respond within 24 hours</p></div></div>
+            <div class="cinfo"><div class="cinfo-ico"><i class="fab fa-whatsapp"></i></div><div><h5>WhatsApp</h5><a href="https://wa.me/234000000000">+234 000 000 0000</a><p style="margin-top:3px;">Update with your actual number</p></div></div>
+            <div class="cinfo"><div class="cinfo-ico"><i class="fas fa-building"></i></div><div><h5>Registration</h5><p>RC: 9365843 | Incorporated: February 24, 2026</p></div></div>
+          </div>
+        </div>
+        <!-- Right: Form -->
+        <div class="form-box reveal">
+          <h3>Send Us an Inquiry</h3>
+          <p class="sub">Fill the form below and we'll get back to you as soon as possible.</p>
+          <form id="contactForm" novalidate>
+            <div class="frow">
+              <div class="fgroup"><label>First Name *</label><input type="text" name="fname" placeholder="First name" required /></div>
+              <div class="fgroup"><label>Last Name *</label><input type="text" name="lname" placeholder="Last name" required /></div>
+            </div>
+            <div class="frow">
+              <div class="fgroup"><label>Email Address *</label><input type="email" name="email" placeholder="your@email.com" required /></div>
+              <div class="fgroup"><label>Phone / WhatsApp</label><input type="tel" name="phone" placeholder="+234 000 000 0000" /></div>
+            </div>
+            <div class="fgroup"><label>Country</label><input type="text" name="country" placeholder="Your country" /></div>
+            <div class="fgroup">
+              <label>Inquiry Type *</label>
+              <select name="type" required>
+                <option value="" disabled selected>Select type of inquiry</option>
+                <option>Agricultural Export Order</option>
+                <option>Product Sample Request</option>
+                <option>General Trading</option>
+                <option>Industrial &amp; Building Materials</option>
+                <option>Logistics &amp; Supply Chain</option>
+                <option>Business Partnership</option>
+                <option>Other Inquiry</option>
+              </select>
+            </div>
+            <div class="fgroup"><label>Product / Commodity</label><input type="text" name="product" placeholder="e.g. Sesame Seeds, 20MT, CIF Rotterdam" /></div>
+            <div class="fgroup"><label>Your Message *</label><textarea name="message" placeholder="Describe your requirements — product, quantity, destination, timeline, etc." required></textarea></div>
+            <button type="submit" class="btn btn-forest form-submit-btn"><i class="fas fa-paper-plane"></i> Send Inquiry</button>
+            <p class="fnote"><i class="fas fa-lock" style="color:var(--forest-bright);margin-right:4px;"></i> Your information is confidential and will not be shared.</p>
+            <div class="success-alert" id="successAlert">✅ Thank you! Your inquiry has been received. We'll respond within 24 hours.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <div class="fl-logo">
+            <div class="fl-logo-box"><img src="assets/logo.png" alt="Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='🌾';" /></div>
+            <div><div class="fl-name">ASMEEMAM</div><div class="fl-sub">General Enterprises Limited</div></div>
+          </div>
+          <p class="fl-about">A registered Nigerian trading company specializing in agricultural export, general trading, and industrial supply — serving clients locally and internationally from Kano, Nigeria.</p>
+          <p class="fl-rc">RC: 9365843 | Incorporated: February 24, 2026</p>
+        </div>
+        <div class="fl-col">
+          <h6>Navigation</h6>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#agriculture">Agriculture</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="fl-col">
+          <h6>Our Services</h6>
+          <ul>
+            <li><a href="#agriculture">Agricultural Export</a></li>
+            <li><a href="#general">General Trading</a></li>
+            <li><a href="#industrial">Industrial Supply</a></li>
+            <li><a href="#logistics">Logistics &amp; Supply Chain</a></li>
+          </ul>
+        </div>
+        <div class="fl-col">
+          <h6>Contact Us</h6>
+          <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>No. 146, Hotoro Maiduguri Road, Opposite Depot, Kano, Kano State, Nigeria</span></div>
+          <div class="fc-item"><i class="fas fa-envelope"></i><a href="mailto:ASMAAIMAM01@GMAIL.COM">ASMAAIMAM01@GMAIL.COM</a></div>
+          <div class="fc-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/234000000000">+234 000 000 0000</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+          <span>© 2026 ASMEEMAM GENERAL ENTERPRISES LIMITED (RC 9365843). All rights reserved.</span>
+          <span>Agricultural Export Company in Kano, Nigeria</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/234000000000" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 40));
+
+    // Mobile burger
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('navMenu');
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      const s = burger.querySelectorAll('span');
+      const open = navMenu.classList.contains('open');
+      s[0].style.transform = open ? 'rotate(45deg) translate(5px,5px)' : '';
+      s[1].style.opacity = open ? '0' : '1';
+      s[2].style.transform = open ? 'rotate(-45deg) translate(5px,-5px)' : '';
+    });
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+    // Active nav highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAs.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + entry.target.id) a.classList.add('active');
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => observer.observe(s));
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 70); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+      this.querySelectorAll('[required]').forEach(f => {
+        f.style.borderColor = '';
+        if (!f.value.trim()) { f.style.borderColor = '#e05555'; valid = false; }
+      });
+      if (valid) {
+        const msg = document.getElementById('successAlert');
+        msg.style.display = 'block';
+        this.reset();
+        setTimeout(() => msg.style.display = 'none', 6000);
+      }
+    });
+  </script>
+</body>
+</html>
